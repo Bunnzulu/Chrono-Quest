@@ -474,7 +474,7 @@ class Main:
                 if pygame.KEYDOWN and self.Showtime <= 40:
                     self.Cutscences.ForwardScene = True
                 if self.Cutscences.ForwardScene:
-                    self.Cutscences.Cyborg_Text("Player has unlocked Forward, press F to move 5 seconds into the future.CAUTION-UNSTABLE", "White")
+                    self.Cutscences.Cyborg_Text("Player has unlocked Forward, press F to move 5 seconds into the future.", "White",Text2="CAUTION-UNSTABLE")
                     if pygame.KEYDOWN and self.Showtime <= -10: 
                         self.Cutscences.ForwardUnlocked = True
                         self.PlayerPause = False
@@ -491,7 +491,7 @@ class Main:
                 if pygame.sprite.collide_rect(self.PlayerGroup.sprite, Lock):
                     self.Cutscences.Interactions("Inspect")
                     self.DoorInt_Interactions("Green")
-            self.HoverBlocks(255,642,self.Cutscences.Level.LV5MovingBlocks)
+            self.HoverBlocks(250,642,self.Cutscences.Level.LV5MovingBlocks)
             self.Death(self.Cutscences.Level.LV5DeadlyBlocks)
         elif self.Cutscences.Stage == "Level 6":
             for Lock in self.Cutscences.Level.Lv6Locks:

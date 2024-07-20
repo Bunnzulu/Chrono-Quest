@@ -124,8 +124,6 @@ class Level:
         self.Exit = False
         self.Frame = pygame.Rect(100,100,100,100)
         self.Lv1Password = "".join(random.sample(self.Numbers, 4))
-        self.Lv2_Clock = pygame.image.load("Chrono_imgs\LV2_Clock.png").convert_alpha()
-        self.Lv2_Clock_rect = self.Lv2_Clock.get_rect(center = (400,200))
         self.RewindSymbol = pygame.image.load("Chrono_imgs/Rewind_Symbol.png").convert_alpha()
         self.RewindSymbol = pygame.transform.scale_by(self.RewindSymbol,1/3)
         self.RewindSymbol_rect = self.RewindSymbol.get_rect(center = self.Frame.center)
@@ -927,9 +925,6 @@ class Level:
         if Map == self.Level_1:
             self.Lv1Doors.draw(pygame.display.get_surface())
             self.Lv1Locks.draw(pygame.display.get_surface())
-            pygame.draw.rect(pygame.display.get_surface(),"White",self.DoorTextBox)
-            pygame.draw.rect(pygame.display.get_surface(),"fuchsia",(400,200,100,100),5)
-            pygame.display.get_surface().blit(self.DoorText,self.DoorText_rect)
         elif Map == self.LV1_Cave:
             self.LV1CaveOpenDoors.draw(pygame.display.get_surface())
             pygame.display.get_surface().blit(self.Lv1PasswordPaper,self.Lv1PasswordPaper_rect)
@@ -937,7 +932,6 @@ class Level:
             self.Lv2Doors.draw(pygame.display.get_surface())
             self.Lv2Locks.draw(pygame.display.get_surface())
             self.Lv2OpenDoors.draw(pygame.display.get_surface())
-            pygame.display.get_surface().blit(self.Lv2_Clock,self.Lv2_Clock_rect)
         elif Map == self.LV2_WC:
             self.LV2_WC_Doors.draw(pygame.display.get_surface())
             self.LV2_DeadlyBlocks.draw(pygame.display.get_surface())

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="256" tileheight="256" infinite="0" nextlayerid="4" nextobjectid="25">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="256" tileheight="256" infinite="0" nextlayerid="4" nextobjectid="25">
  <editorsettings>
   <export format="tmx"/>
  </editorsettings>
  <tileset firstgid="1" source="Org_Tiles.tsx"/>
- <tileset firstgid="35" source="Org_Objects.tsx"/>
+ <tileset firstgid="37" source="Org_Objects.tsx"/>
  <layer id="1" name="BackGround" width="25" height="20">
   <data encoding="csv">
 4,3,4,3,4,3,4,3,4,3,4,3,4,3,4,3,4,3,4,3,4,3,4,3,4,
@@ -54,8 +54,8 @@
 </data>
  </layer>
  <objectgroup id="3" name="Level_Objects">
-  <object id="2" name="Start_Door" class="Door" gid="35" x="18.6652" y="1276.37" width="704" height="1064"/>
-  <object id="6" name="Finish_Door" class="Door" gid="37" x="780.317" y="4345.68" width="721" height="1088"/>
-  <object id="24" name="Timer" gid="39" x="508.317" y="4362.54" width="248" height="577"/>
+  <object id="2" name="Start_Door" type="Door" gid="37" x="18.6652" y="1276.37" width="704" height="1064"/>
+  <object id="6" name="Finish_Door" type="Door" gid="39" x="780.317" y="4345.68" width="721" height="1088"/>
+  <object id="24" name="Timer" gid="41" x="508.317" y="4362.54" width="248" height="577"/>
  </objectgroup>
 </map>
