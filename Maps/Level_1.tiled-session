@@ -1,0 +1,298 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Level1_Cave.tmx": {
+            "scale": 0.125,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 2672,
+                "y": 2428
+            }
+        },
+        "Level_1.tmx": {
+            "scale": 0.14828906249999999,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 3203.203203203204,
+                "y": 2572.677941098994
+            }
+        },
+        "Level_10.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3206.6666666666665,
+                "y": 2570.0000000000005
+            }
+        },
+        "Level_10.tmx#Org_Tiles": {
+            "scaleInDock": 1
+        },
+        "Level_12.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 2968.6699017046167,
+                "y": 2589.622993654349
+            }
+        },
+        "Level_13.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3206.6666666666665,
+                "y": 2570.0000000000005
+            }
+        },
+        "Level_13.tmx#Org_Tiles": {
+            "scaleInDock": 1
+        },
+        "Level_14.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3210.7502799552076,
+                "y": 2564.1408485753395
+            }
+        },
+        "Level_15W.tmx": {
+            "scale": 0.14828906249999999,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 3209.9467888941576,
+                "y": 2572.677941098994
+            }
+        },
+        "Level_16.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3312.678860271246,
+                "y": 2271.096180166729
+            }
+        },
+        "Level_17.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3196.666666666667,
+                "y": 2556.6666666666665
+            }
+        },
+        "Level_17.tmx#Org_Tiles": {
+            "scaleInDock": 1
+        },
+        "Level_18.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 3194.8239392808264,
+                "y": 2557.7703123055867
+            }
+        },
+        "Level_19.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3206.6666666666665,
+                "y": 2576.666666666667
+            }
+        },
+        "Level_19.tmx#Org_Tiles": {
+            "scaleInDock": 1
+        },
+        "Level_1e.tmx": {
+            "scale": 0.14828906249999999,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 3203.203203203204,
+                "y": 2572.677941098994
+            }
+        },
+        "Level_2.tmx": {
+            "scale": 0.15697265624999998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 3204.3797436854557,
+                "y": 2564.1408485753395
+            }
+        },
+        "Level_20.tmx": {
+            "scale": 0.15697265624999998,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3198.009207415703,
+                "y": 2557.770312305587
+            }
+        },
+        "Level_20.tmx#Org_Tiles": {
+            "scaleInDock": 1
+        },
+        "Level_2_Wrong_Choice.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3185.268134876198,
+                "y": 2564.1408485753395
+            }
+        },
+        "Level_3.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 3210.7502799552076,
+                "y": 2564.1408485753395
+            }
+        },
+        "Level_3.tmx#Org_Tiles": {
+            "dynamicWrapping": true,
+            "scaleInEditor": 1
+        },
+        "Level_4.tmx": {
+            "scale": 0.15697265624999998,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 2771.183277342292,
+                "y": 3048.301605076521
+            }
+        },
+        "Level_5.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3312.678860271246,
+                "y": 2271.096180166729
+            }
+        },
+        "Level_6.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 2968.6699017046167,
+                "y": 2589.622993654349
+            }
+        },
+        "Level_7.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3331.790469080503,
+                "y": 2271.096180166729
+            }
+        },
+        "Level_8.tmx": {
+            "scale": 0.14828906249999999,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3216.690374585112,
+                "y": 2572.677941098994
+            }
+        },
+        "Level_9.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.15697265624999998,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 3312.678860271246,
+                "y": 2271.096180166729
+            }
+        },
+        "Org_Objects.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Org_Tiles.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 0.33,
+            "scaleInEditor": 1
+        },
+        "Orginal_Set/Org_Tiles.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Terran_Top.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "C:/Users/bunnz/OneDrive/Desktop/Chrono Quest/Maps",
+    "last.externalTilesetPath": "C:/Users/bunnz/OneDrive/Desktop/Chrono Quest/Maps",
+    "last.imagePath": "C:/Users/bunnz/OneDrive/Desktop/Chrono Quest/Maps/Orginal_Set/Objects",
+    "map.fixedSize": false,
+    "map.height": 32,
+    "map.lastUsedExportFilter": "Tiled map files (*.tmx *.xml)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 35,
+    "openFiles": [
+    ],
+    "project": "Level_1.tiled-project",
+    "recentFiles": [
+        "Level_20.tmx",
+        "Level_18.tmx",
+        "Level_17.tmx",
+        "Org_Objects.tsx",
+        "Org_Tiles.tsx",
+        "Level_19.tmx",
+        "Level_12.tmx",
+        "Level_14.tmx",
+        "Level_16.tmx",
+        "Level_15W.tmx",
+        "Level_13.tmx",
+        "Level_9.tmx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}
