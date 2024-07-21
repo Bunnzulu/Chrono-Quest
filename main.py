@@ -101,6 +101,7 @@ class Main:
         self.Player_Respawn()
         self.Player_Particles()
         self.Bullets.draw(SCREEN)
+        print(self.SlowDown)
         self.Bullets.update(self.SlowDown)
         self.LV17bullets.draw(SCREEN)
         self.LV17bullets.update(self.SlowDown)
@@ -402,8 +403,10 @@ class Main:
             self.Check_Yes_Option()
             if self.No: self.Door = False; self.No = False
             elif self.Yes:
+                self.Time_Stop = False
                 self.Yes = False
                 self.Door = False
+                self.Bullets.empty()
                 self.Cutscences.Stage = Destination
                 self.Player.rect.center,self.Cutscences.Level.Player_pos = pos,pos
                 self.Collideing_Tiles = Tiles
