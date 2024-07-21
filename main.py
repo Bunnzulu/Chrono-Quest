@@ -764,10 +764,6 @@ class Main:
                         self.Cutscences.Level.Lv1ClosedDoors.remove(Door)
         self.Door_Interactions()
         self.Puzzle_Keys()
-        # elif self.Cutscences.Stage in ("Level 2", "Level 3", "Level 4","Level 5"):
-        # else:
-        #     self.Door_Interactions()
-        #     self.Puzzle_Keys()
     
     def Death(self,DeathBlocks:pygame.sprite.Group):
         if not self.Time_Stop:
