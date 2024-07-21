@@ -478,6 +478,7 @@ class Main:
                     if pygame.KEYDOWN and self.Showtime <= -10: 
                         self.Cutscences.ForwardUnlocked = True
                         self.PlayerPause = False
+                        self.Showtime = 100
             self.Death(self.Cutscences.Level.LV3_DeadlyBlocks)
         elif self.Cutscences.Stage == "Level 4":
             for Lock in self.Cutscences.Level.Lv4Locks:
@@ -565,7 +566,7 @@ class Main:
                 if self.Showtime <= 90:
                     self.Cutscences.TP_Scene = True
                 if self.Cutscences.TP_Scene:
-                    self.Cutscences.Cyborg_Text("Player has unlocked Time Pause, press P to slow down time for 10 seconds", "White","Cooldown:45s")
+                    self.Cutscences.Cyborg_Text("Player has unlocked Time Pause, press P to pause time for 10 seconds", "White","Cooldown:45s")
                 if self.Showtime <= -10: 
                     self.Cutscences.Level.TPunlocked = True
                     self.PlayerPause = False
