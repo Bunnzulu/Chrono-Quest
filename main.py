@@ -101,7 +101,7 @@ class Main:
         self.Player_Respawn()
         self.Player_Particles()
         self.Bullets.draw(SCREEN)
-        print(self.SlowDown)
+        print(f"SlowDone: {self.SlowDown}, TSTime:{self.TSTime}, TPTime: {self.TPTime}")
         self.Bullets.update(self.SlowDown)
         self.LV17bullets.draw(SCREEN)
         self.LV17bullets.update(self.SlowDown)
@@ -935,7 +935,9 @@ while True:
                 main.PowerStatus2 = (f"Cooldown: {main.TPCooldown}")
                 main.PowerStatus_color2 = "Red"
                 main.TPParticles_on = False
-                if not slow_set: main.SlowDown = 1; slow_set = True
+                if not slow_set: 
+                    main.SlowDown = 1
+                    slow_set = True
                 main.Time_Stop = False
             if e.type == Cooldown_Timer:
                 if main.TPTime > 0:
