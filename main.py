@@ -403,7 +403,6 @@ class Main:
             self.Check_Yes_Option()
             if self.No: self.Door = False; self.No = False
             elif self.Yes:
-                self.Time_Stop = False
                 self.Yes = False
                 self.Door = False
                 self.Bullets.empty()
@@ -912,6 +911,7 @@ while True:
                     pygame.time.set_timer(LV13BoxFall,1300)
                     pygame.time.set_timer(LV16BoxFall,5000)
                     pygame.time.set_timer(LV17TurretGun,1600)
+                    pygame.time.set_timer(LV11SawDisplay,250)
                     timer_set = True    
             if e.type == Cooldown_Timer:
                 if main.TSTime > 0:
@@ -951,6 +951,7 @@ while True:
                     main.TPTime = 10
                     main.TPUSED = False
                     main.TPShownCooldown = False
+                    slow_set = False
                     main.PowerStatus_color2 = "Green"
                     main.PowerStatus2 = main.TPTime
 
