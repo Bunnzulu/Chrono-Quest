@@ -28,6 +28,7 @@ class Main:
         self.RewindUnlocked = False
         self.Forward = False
         self.Rewind_pos = (0,0)
+        self.Foreword_pos = (0,0)
         self.TSUSED =False
         self.TSShownCooldown = False
         self.TPShownCooldown = False
@@ -809,6 +810,7 @@ class Main:
                 self.Player.Died = False
                 self.Player.image = self.Player.Idle1image
                 self.Player.rect.center = self.Cutscences.Level.Player_pos
+                self.Foreword_pos = self.Player.rect.center
                 self.Player.TPParticle.particles.clear()
 
     def Player_Particles(self):
@@ -859,6 +861,7 @@ while True:
         
         if e.type == Rewind_Forward_Timer:
             main.Rewind_pos = main.Player.rect.center
+            main.Foreword_pos = main.Player.rect.center
 
         if e.type == PARTICLEEVENT:
             if main.TPParticles_on and not main.Player.Died:
@@ -981,8 +984,8 @@ while True:
                         main.PlayerStop = False
                 if main.Cutscences.ForwardUnlocked:
                     if e.key == pygame.K_f and main.Rewind_pos is not None and not main.Time_Stop:
-                        main.forward_x = main.Player.rect.center[0] + (main.Player.rect.center[0] - main.Rewind_pos[0])
-                        main.forward_y = main.Player.rect.center[1] + (main.Player.rect.center[1] - main.Rewind_pos[1])
+                        main.forward_x = main.Player.rect.center[0] + (main.Player.rect.center[0] - main.Foreword_pos[0])
+                        main.forward_y = main.Player.rect.center[1] + (main.Player.rect.center[1] - main.Foreword_pos[1])
                         if main.forward_y > 541: main.forward_y = 541
                         if main.forward_y < 0: main.forward_y = 0
                         main.Player.rect.center = (main.forward_x, main.forward_y)
