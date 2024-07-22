@@ -691,10 +691,10 @@ class Level:
             elif obj.name == "Timer":Tile((674,125),obj.image,(self.LV14Locks),False,"Timer")
             elif obj.name == "Finish_Door": Tile((734,45),obj.image,(self.Lv14OpenDoors,self.Lv14Doors),False,"Finish_Door")
             elif obj.name == "Top-Gun": Enemies((261,32),obj.image,(self.Lv14Shooters,self.LV14DeadlyBlocks),Name="Top-Gun",Direction=Vector2(0,4),Surface=(6,3),Scale=7)
-            elif obj.name == "Right-FastGun": Enemies((617,259),obj.image,(self.LV14FastShooters,self.LV14DeadlyBlocks),Name="Right-FastGun",Direction=Vector2(-6,0),Surface=(6,1),Scale=7)
-            elif obj.name == "Bottom-Gun": Enemies((356,493),obj.image,(self.Lv14Shooters,self.LV14DeadlyBlocks),Name="Bottom-Gun",Direction=Vector2(0,-3),Surface=(1,6),Scale=7)
-            elif obj.name == "Bottom-FastGun": Enemies((424,493),obj.image,(self.LV14FastShooters,self.LV14DeadlyBlocks),Name="Bottom-FastGun",Direction=Vector2(0,-6),Surface=(1,6),Scale=7)
-            elif obj.name == "Left-FastGun": Enemies((0,330),obj.image,(self.LV14FastShooters,self.LV14DeadlyBlocks),Name="Left-FastGun",Direction=Vector2(6,0),Surface=(6,1),Scale=7)
+            elif obj.name == "Right-FastGun": Enemies((617,259),obj.image,(self.LV14FastShooters,self.LV14DeadlyBlocks),Name="Right-FastGun",Direction=Vector2(-6,0),Surface=(6,3),Scale=7)
+            elif obj.name == "Bottom-Gun": Enemies((356,493),obj.image,(self.Lv14Shooters,self.LV14DeadlyBlocks),Name="Bottom-Gun",Direction=Vector2(0,-3),Surface=(3,6),Scale=7)
+            elif obj.name == "Bottom-FastGun": Enemies((424,493),obj.image,(self.LV14FastShooters,self.LV14DeadlyBlocks),Name="Bottom-FastGun",Direction=Vector2(0,-6),Surface=(3,6),Scale=7)
+            elif obj.name == "Left-FastGun": Enemies((0,330),obj.image,(self.LV14FastShooters,self.LV14DeadlyBlocks),Name="Left-FastGun",Direction=Vector2(6,0),Surface=(6,3),Scale=7)
 
     def Load_LV15(self):
         name = ''

@@ -824,9 +824,11 @@ class Main:
 
 main = Main()         
 TurretGun = pygame.USEREVENT + 4
-pygame.time.set_timer(TurretGun,800)
+TurrentTimer = 1500
+pygame.time.set_timer(TurretGun,TurrentTimer)
 FastGun = pygame.USEREVENT + 5
-pygame.time.set_timer(FastGun,1800)
+FastGunTimer = 1800
+pygame.time.set_timer(FastGun,FastGunTimer)
 LV10SawDisplay = pygame.USEREVENT + 6
 pygame.time.set_timer(LV10SawDisplay,500)
 PARTICLEEVENT = pygame.USEREVENT +7
@@ -834,11 +836,14 @@ pygame.time.set_timer(PARTICLEEVENT,10)
 LV11SawDisplay = pygame.USEREVENT + 8
 pygame.time.set_timer(LV11SawDisplay,250)
 LV13BoxFall = pygame.USEREVENT + 9
-pygame.time.set_timer(LV13BoxFall,1300)
+LV13BoxFallTimer = 1300
+pygame.time.set_timer(LV13BoxFall,LV13BoxFallTimer)
 LV16BoxFall = pygame.USEREVENT + 10
-pygame.time.set_timer(LV16BoxFall,5000)
+LV16BoxFallTimer = 5000
+pygame.time.set_timer(LV16BoxFall,LV16BoxFallTimer)
 LV17TurretGun = pygame.USEREVENT + 11
-pygame.time.set_timer(LV17TurretGun,1600)
+LV17TurretGunTimer = 1600
+pygame.time.set_timer(LV17TurretGun,LV17TurretGunTimer)
 timer_set = False
 slow_set = False
 while True:
@@ -905,12 +910,12 @@ while True:
                 main.PowerStatus_color = "Red"
                 if not timer_set:
                     main.SlowDown = 1
-                    pygame.time.set_timer(TurretGun,800)
-                    pygame.time.set_timer(FastGun,1800)
+                    pygame.time.set_timer(TurretGun,TurrentTimer)
+                    pygame.time.set_timer(FastGun,FastGunTimer)
                     pygame.time.set_timer(LV10SawDisplay,500)
-                    pygame.time.set_timer(LV13BoxFall,1300)
-                    pygame.time.set_timer(LV16BoxFall,5000)
-                    pygame.time.set_timer(LV17TurretGun,1600)
+                    pygame.time.set_timer(LV13BoxFall,LV13BoxFallTimer)
+                    pygame.time.set_timer(LV16BoxFall,LV16BoxFallTimer)
+                    pygame.time.set_timer(LV17TurretGun,LV17TurretGunTimer)
                     pygame.time.set_timer(LV11SawDisplay,250)
                     timer_set = True    
             if e.type == Cooldown_Timer:
@@ -991,13 +996,13 @@ while True:
                         if main.TSTime == 10 and not main.Time_Stop:
                             main.SlowDown = 0.5
                             main.TSUSED = True
-                            pygame.time.set_timer(TurretGun,1600)
-                            pygame.time.set_timer(FastGun,3600)
+                            pygame.time.set_timer(TurretGun,TurrentTimer*2)
+                            pygame.time.set_timer(FastGun,FastGunTimer*2)
                             pygame.time.set_timer(LV10SawDisplay,1000)
                             pygame.time.set_timer(LV11SawDisplay,500)
-                            pygame.time.set_timer(LV13BoxFall,2600)
-                            pygame.time.set_timer(LV16BoxFall,10000)
-                            pygame.time.set_timer(LV17TurretGun,3200)
+                            pygame.time.set_timer(LV13BoxFall,LV13BoxFallTimer*2)
+                            pygame.time.set_timer(LV16BoxFall,LV16BoxFallTimer*2)
+                            pygame.time.set_timer(LV17TurretGun,LV17TurretGunTimer*2)
                 if main.Cutscences.Level.TPunlocked:
                     if e.key == pygame.K_p:
                         if not main.TSUSED and not main.TPUSED:
