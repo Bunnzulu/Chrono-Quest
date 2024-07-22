@@ -900,11 +900,11 @@ while True:
         if main.Cutscences.TS_Unlocked and (main.TSUSED or main.TSShownCooldown):
             if main.TSTime == 0:
                 main.TSShownCooldown = True
-                main.SlowDown = 1
                 main.TSUSED = False
                 main.PowerStatus = (f"Cooldown: {main.TSCooldown}")
                 main.PowerStatus_color = "Red"
                 if not timer_set:
+                    main.SlowDown = 1
                     pygame.time.set_timer(TurretGun,800)
                     pygame.time.set_timer(FastGun,1800)
                     pygame.time.set_timer(LV10SawDisplay,500)
