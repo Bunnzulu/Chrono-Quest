@@ -12,14 +12,13 @@ Cyborg_Text_Timer = pygame.USEREVENT + 2
 pygame.time.set_timer(Cyborg_Text_Timer,100)
 Rewind_Forward_Timer = pygame.USEREVENT + 3
 pygame.time.set_timer(Rewind_Forward_Timer, 5000)
-#100 looks good for Cyborg Text
 
 class Main:
     def __init__(self):
         self.Player = Player()
         self.Cutscences = Cutscence()
         self.Showtime = 100
-        self.MovingBlockSpeed = -2
+        self.MovingBlockSpeed = -2                  
         self.MovingBlockSpeed2 = 2
         self.MovingBlockSpeedSquare = pygame.math.Vector2(2,2)
         self.MovingBlockSpeedSquare2 = pygame.math.Vector2(2,2)
@@ -102,14 +101,13 @@ class Main:
         self.Player_Respawn()
         self.Player_Particles()
         self.Bullets.draw(SCREEN)
-        print(f"SlowDone: {self.SlowDown}, TSTime:{self.TSTime}, TPTime: {self.TPTime}")
+        # print(f"SlowDone: {self.SlowDown}, TSTime:{self.TSTime}, TPTime: {self.TPTime}")
         self.Bullets.update(self.SlowDown)
         self.LV17bullets.draw(SCREEN)
         self.LV17bullets.update(self.SlowDown)
     
     def Player_Draw_Control(self):
         if self.Cutscences.Stage in ("Start","Black","Finish"): self.Player.rect.center = self.Cutscences.Level.Player_pos
-        # elif self.Cutscences.Stage in ("Level 1", "LV1-Cave", "Level 2", "LV2_WC", "Level 3", "Level 4", "Level 5"):
         else:
             self.PlayerGroup.draw(SCREEN)
             self.Player_Respawn()
