@@ -21,7 +21,7 @@ class Cutscence:
         self.pressed = False
         self.Text1_DIsplay = False
         self.Text2_Display = False
-        self.Door = pygame.image.load("Maps\Orginal_Set\Objects\DoorLocked.png").convert_alpha()
+        self.Door = pygame.image.load(r"Maps\Orginal_Set\Objects\DoorLocked.png").convert_alpha()
         self.Door = pygame.transform.scale_by(self.Door,1/2)
         self.Door_rect = self.Door.get_rect(center = (self.Screen.get_width()/2,self.Screen.get_height()/2))
         self.Fade_in = False

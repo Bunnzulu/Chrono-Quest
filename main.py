@@ -350,7 +350,7 @@ class Main:
                         self.Cutscences.Interactions("Try")
                         if Door in self.Cutscences.Level.Lv19ClosedDoors.sprites():self.Closed_Door_Interaction()
                         elif Door in self.Cutscences.Level.Lv19OpenDoors.sprites():
-                            self.Open_Door_Interaction("Level 20", (34,34), self.Cutscences.Level.Level_19)
+                            self.Open_Door_Interaction("Level 20", (34,34), self.Cutscences.Level.Level_20)
 
             elif self.Cutscences.Stage == "Level 20":
                 for Door in self.Cutscences.Level.Lv20Doors.sprites():
@@ -972,6 +972,7 @@ while True:
                 main.TLUsed = False
                 main.Time_loop = False
                 main.TLTime = 15
+                main.PlayerStop = False
             if e.type == Cooldown_Timer:
                 if main.TLTime > 0:
                     main.TLTime -= 1

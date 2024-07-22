@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="256" tileheight="256" infinite="0" nextlayerid="4" nextobjectid="32">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="256" tileheight="256" infinite="0" nextlayerid="4" nextobjectid="32">
  <editorsettings>
   <export format="tmx"/>
  </editorsettings>
@@ -134,7 +134,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-88,87,89,89,88,88,87,88,88,88,87,87,87,89,88,88,88,88,88,88,88,88,88,88,88,
+88,87,89,89,88,88,87,88,88,88,87,87,87,89,88,88,88,88,88,88,88,88,18,18,18,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -147,7 +147,7 @@
 </data>
  </layer>
  <objectgroup id="3" name="Level_Objects">
-  <object id="6" name="Finish_Door" class="Door" gid="39" x="5648.74" y="4970.51" width="721" height="1088"/>
+  <object id="6" name="Finish_Door" type="Door" gid="39" x="5648.74" y="4970.51" width="721" height="1088"/>
   <object id="21" name="Timer" gid="41" x="5378.67" y="5097" width="328" height="657"/>
  </objectgroup>
 </map>
