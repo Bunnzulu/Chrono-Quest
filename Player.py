@@ -1,9 +1,6 @@
 import pygame
 pygame.init()
 
-WIDTH,HEIGHT = 800,800
-SCREEN = pygame.display.set_mode((WIDTH,HEIGHT))
-Clock = pygame.time.Clock()
 
 class TSParticles:
     def __init__(self,Surronded_rect_pos:tuple,Flip:bool = False,Rotate:bool = False,Flip_x_y:tuple = (False,False),Rotated_angle:int = 360):
@@ -14,13 +11,13 @@ class TSParticles:
         self.Rotate = Rotate
         self.Flip_x_y = Flip_x_y
         self.R = Rotated_angle
-        self.Particle1 = pygame.image.load(f"Chrono_imgs/LT100.png").convert_alpha()
-        self.Particle2 = pygame.image.load(f"Chrono_imgs/LT101.png").convert_alpha()
-        self.Particle3 = pygame.image.load(f"Chrono_imgs/LT102.png").convert_alpha()
-        self.Particle4 = pygame.image.load(f"Chrono_imgs/LT103.png").convert_alpha()
-        self.Particle5 = pygame.image.load(f"Chrono_imgs/LT104.png").convert_alpha()
-        self.Particle6 = pygame.image.load(f"Chrono_imgs/LT105.png").convert_alpha()
-        self.Particle7 = pygame.image.load(f"Chrono_imgs/LT106.png").convert_alpha()
+        self.Particle1 = pygame.image.load(r"Chrono_imgs/LT100.png").convert_alpha()
+        self.Particle2 = pygame.image.load(r"Chrono_imgs/LT101.png").convert_alpha()
+        self.Particle3 = pygame.image.load(r"Chrono_imgs/LT102.png").convert_alpha()
+        self.Particle4 = pygame.image.load(r"Chrono_imgs/LT103.png").convert_alpha()
+        self.Particle5 = pygame.image.load(r"Chrono_imgs/LT104.png").convert_alpha()
+        self.Particle6 = pygame.image.load(r"Chrono_imgs/LT105.png").convert_alpha()
+        self.Particle7 = pygame.image.load(r"Chrono_imgs/LT106.png").convert_alpha()
         self.Particles1 = [self.Particle1,self.Particle2,self.Particle3,self.Particle4,self.Particle5,self.Particle6,self.Particle7]
         self.Particles1 = [pygame.transform.rotozoom(image,360,1/self.Scalefactor) for image in self.Particles1]
         self.Particles1 = [self.Edit_particle(image) for image in self.Particles1]
@@ -46,24 +43,24 @@ class TSParticles:
 class TPParticles:
     def __init__(self,PL:int,pos:tuple):
         self.particles = []
-        self.size = 8 #width and height
+        self.size = 8
         self.Particle_Limit = PL
         self.pos = pos
     
-    def emit(self): #Moves + draws particles
+    def emit(self):
         if self.particles:
             self.delete_particles()
             for particle in self.particles:
                 particle[0].x -= 1
-                pygame.draw.rect(SCREEN,particle[1],particle[0])
+                pygame.draw.rect(pygame.display.get_surface(),particle[1],particle[0])
     
-    def add_particles(self,offset,color):#Adds particles
+    def add_particles(self,offset,color):
         pos_x ,pos_y = self.pos
         pos_y += offset
         particle_rect = pygame.Rect(pos_x - self.size/2,pos_y - self.size/2,self.size,self.size)
         self.particles.append((particle_rect,color))
 
-    def delete_particles(self): #deletes particle
+    def delete_particles(self):
         particle_copy = [part for part in self.particles if part[0].x > self.Particle_Limit]
         self.particles = particle_copy
 
@@ -71,69 +68,69 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         super().__init__()
         self.Scaleby = 6
-        self.Idle1image = pygame.image.load("Chrono_Sprites\Idle (1).png").convert_alpha()
-        self.Idle2image = pygame.image.load("Chrono_Sprites\Idle (2).png").convert_alpha()
-        self.Idle3image = pygame.image.load("Chrono_Sprites\Idle (3).png").convert_alpha()
-        self.Idle4image = pygame.image.load("Chrono_Sprites\Idle (4).png").convert_alpha()
-        self.Idle5image = pygame.image.load("Chrono_Sprites\Idle (5).png").convert_alpha()
-        self.Idle6image = pygame.image.load("Chrono_Sprites\Idle (6).png").convert_alpha()
-        self.Idle7image = pygame.image.load("Chrono_Sprites\Idle (7).png").convert_alpha()
-        self.Idle8image = pygame.image.load("Chrono_Sprites\Idle (8).png").convert_alpha()
-        self.Idle9image = pygame.image.load("Chrono_Sprites\Idle (9).png").convert_alpha()
-        self.Idle10image = pygame.image.load("Chrono_Sprites\Idle (10).png").convert_alpha()
+        self.Idle1image = pygame.image.load(r"Chrono_Sprites\Idle (1).png").convert_alpha()
+        self.Idle2image = pygame.image.load(r"Chrono_Sprites\Idle (2).png").convert_alpha()
+        self.Idle3image = pygame.image.load(r"Chrono_Sprites\Idle (3).png").convert_alpha()
+        self.Idle4image = pygame.image.load(r"Chrono_Sprites\Idle (4).png").convert_alpha()
+        self.Idle5image = pygame.image.load(r"Chrono_Sprites\Idle (5).png").convert_alpha()
+        self.Idle6image = pygame.image.load(r"Chrono_Sprites\Idle (6).png").convert_alpha()
+        self.Idle7image = pygame.image.load(r"Chrono_Sprites\Idle (7).png").convert_alpha()
+        self.Idle8image = pygame.image.load(r"Chrono_Sprites\Idle (8).png").convert_alpha()
+        self.Idle9image = pygame.image.load(r"Chrono_Sprites\Idle (9).png").convert_alpha()
+        self.Idle10image = pygame.image.load(r"Chrono_Sprites\Idle (10).png").convert_alpha()
         self.Idleimagess = [self.Idle1image, self.Idle2image,self.Idle3image, self.Idle4image,self.Idle5image,self.Idle6image,self.Idle7image,self.Idle8image, self.Idle9image,self.Idle10image]
         self.Idleimages = [pygame.transform.scale_by(image, 1/self.Scaleby) for image in self.Idleimagess]
         self.Idle2images = [pygame.transform.flip(image,True,False) for image in self.Idleimages]
         self.Right = True
         self.IdleIndex = 0
 
-        self.Run1image = pygame.image.load("Chrono_Sprites\Run (1).png").convert_alpha()
-        self.Run2image = pygame.image.load("Chrono_Sprites\Run (2).png").convert_alpha()
-        self.Run3image = pygame.image.load("Chrono_Sprites\Run (3).png").convert_alpha()
-        self.Run4image = pygame.image.load("Chrono_Sprites\Run (4).png").convert_alpha()
-        self.Run5image = pygame.image.load("Chrono_Sprites\Run (5).png").convert_alpha()
-        self.Run6image = pygame.image.load("Chrono_Sprites\Run (6).png").convert_alpha()
-        self.Run7image = pygame.image.load("Chrono_Sprites\Run (7).png").convert_alpha()
-        self.Run8image = pygame.image.load("Chrono_Sprites\Run (8).png").convert_alpha()
+        self.Run1image = pygame.image.load(r"Chrono_Sprites\Run (1).png").convert_alpha()
+        self.Run2image = pygame.image.load(r"Chrono_Sprites\Run (2).png").convert_alpha()
+        self.Run3image = pygame.image.load(r"Chrono_Sprites\Run (3).png").convert_alpha()
+        self.Run4image = pygame.image.load(r"Chrono_Sprites\Run (4).png").convert_alpha()
+        self.Run5image = pygame.image.load(r"Chrono_Sprites\Run (5).png").convert_alpha()
+        self.Run6image = pygame.image.load(r"Chrono_Sprites\Run (6).png").convert_alpha()
+        self.Run7image = pygame.image.load(r"Chrono_Sprites\Run (7).png").convert_alpha()
+        self.Run8image = pygame.image.load(r"Chrono_Sprites\Run (8).png").convert_alpha()
         self.RunIndex = 0
         self.Run2Index = 0
         self.RunImages = [self.Run1image, self.Run2image,self.Run3image, self.Run4image, self.Run5image,self.Run6image, self.Run7image,self.Run8image]
         self.RunImages = [pygame.transform.scale_by(image, 1/self.Scaleby) for image in self.RunImages]
         self.Run2Images = [pygame.transform.flip(image,True,False) for image in self.RunImages]
 
-        self.Jump1image = pygame.image.load("Chrono_Sprites\Jump (1).png").convert_alpha()
-        self.Jump2image = pygame.image.load("Chrono_Sprites\Jump (2).png").convert_alpha()
-        self.Jump3image = pygame.image.load("Chrono_Sprites\Jump (3).png").convert_alpha()
-        self.Jump4image = pygame.image.load("Chrono_Sprites\Jump (4).png").convert_alpha()
-        self.Jump5image = pygame.image.load("Chrono_Sprites\Jump (5).png").convert_alpha()
-        self.Jump6image = pygame.image.load("Chrono_Sprites\Jump (6).png").convert_alpha()
-        self.Jump7image = pygame.image.load("Chrono_Sprites\Jump (7).png").convert_alpha()
-        self.Jump8image = pygame.image.load("Chrono_Sprites\Jump (8).png").convert_alpha()
-        self.Jump9image = pygame.image.load("Chrono_Sprites\Jump (9).png").convert_alpha()
-        self.Jump10image = pygame.image.load("Chrono_Sprites\Jump (10).png").convert_alpha()
+        self.Jump1image = pygame.image.load(r"Chrono_Sprites\Jump (1).png").convert_alpha()
+        self.Jump2image = pygame.image.load(r"Chrono_Sprites\Jump (2).png").convert_alpha()
+        self.Jump3image = pygame.image.load(r"Chrono_Sprites\Jump (3).png").convert_alpha()
+        self.Jump4image = pygame.image.load(r"Chrono_Sprites\Jump (4).png").convert_alpha()
+        self.Jump5image = pygame.image.load(r"Chrono_Sprites\Jump (5).png").convert_alpha()
+        self.Jump6image = pygame.image.load(r"Chrono_Sprites\Jump (6).png").convert_alpha()
+        self.Jump7image = pygame.image.load(r"Chrono_Sprites\Jump (7).png").convert_alpha()
+        self.Jump8image = pygame.image.load(r"Chrono_Sprites\Jump (8).png").convert_alpha()
+        self.Jump9image = pygame.image.load(r"Chrono_Sprites\Jump (9).png").convert_alpha()
+        self.Jump10image = pygame.image.load(r"Chrono_Sprites\Jump (10).png").convert_alpha()
         self.JumpImages = [self.Jump1image,self.Jump2image,self.Jump3image,self.Jump4image,self.Jump5image,self.Jump6image,self.Jump7image,self.Jump8image,self.Jump9image,self.Jump10image]
         self.JumpImages = [pygame.transform.scale_by(image, 1/self.Scaleby) for image in self.JumpImages]
         self.Jump2Images = [pygame.transform.flip(image,True,False) for image in self.JumpImages]
         self.JumpIndex = 0
 
-        self.Die1image = pygame.image.load("Chrono_Sprites\Dead (1).png").convert_alpha()
-        self.Die2image = pygame.image.load("Chrono_Sprites\Dead (2).png").convert_alpha()
-        self.Die3image = pygame.image.load("Chrono_Sprites\Dead (3).png").convert_alpha()
-        self.Die4image = pygame.image.load("Chrono_Sprites\Dead (4).png").convert_alpha()
-        self.Die5image = pygame.image.load("Chrono_Sprites\Dead (5).png").convert_alpha()
-        self.Die6image = pygame.image.load("Chrono_Sprites\Dead (6).png").convert_alpha()
-        self.Die7image = pygame.image.load("Chrono_Sprites\Dead (7).png").convert_alpha()
-        self.Die8image = pygame.image.load("Chrono_Sprites\Dead (8).png").convert_alpha()
-        self.Die9image = pygame.image.load("Chrono_Sprites\Dead (9).png").convert_alpha()
-        self.Die10image = pygame.image.load("Chrono_Sprites\Dead (10).png").convert_alpha()
-        self.Die11image = pygame.image.load("Chrono_Sprites/Player_Die4.png").convert_alpha()
-        self.Die12image = pygame.image.load("Chrono_Sprites/Player_Die5.png").convert_alpha()
-        self.Die13image = pygame.image.load("Chrono_Sprites/Player_Die6.png").convert_alpha()
-        self.Die14image = pygame.image.load("Chrono_Sprites/Player_Die7.png").convert_alpha()
-        self.Die15image = pygame.image.load("Chrono_Sprites/Player_Die8.png").convert_alpha()
-        self.Die16image = pygame.image.load("Chrono_Sprites/Player_Die9.png").convert_alpha()
-        self.Die17image = pygame.image.load("Chrono_Sprites/Player_Die10.png").convert_alpha()
-        self.Die18image = pygame.image.load("Chrono_Sprites/Player_Die11.png").convert_alpha()
+        self.Die1image = pygame.image.load(r"Chrono_Sprites\Dead (1).png").convert_alpha()
+        self.Die2image = pygame.image.load(r"Chrono_Sprites\Dead (2).png").convert_alpha()
+        self.Die3image = pygame.image.load(r"Chrono_Sprites\Dead (3).png").convert_alpha()
+        self.Die4image = pygame.image.load(r"Chrono_Sprites\Dead (4).png").convert_alpha()
+        self.Die5image = pygame.image.load(r"Chrono_Sprites\Dead (5).png").convert_alpha()
+        self.Die6image = pygame.image.load(r"Chrono_Sprites\Dead (6).png").convert_alpha()
+        self.Die7image = pygame.image.load(r"Chrono_Sprites\Dead (7).png").convert_alpha()
+        self.Die8image = pygame.image.load(r"Chrono_Sprites\Dead (8).png").convert_alpha()
+        self.Die9image = pygame.image.load(r"Chrono_Sprites\Dead (9).png").convert_alpha()
+        self.Die10image = pygame.image.load(r"Chrono_Sprites\Dead (10).png").convert_alpha()
+        self.Die11image = pygame.image.load(r"Chrono_Sprites/Player_Die4.png").convert_alpha()
+        self.Die12image = pygame.image.load(r"Chrono_Sprites/Player_Die5.png").convert_alpha()
+        self.Die13image = pygame.image.load(r"Chrono_Sprites/Player_Die6.png").convert_alpha()
+        self.Die14image = pygame.image.load(r"Chrono_Sprites/Player_Die7.png").convert_alpha()
+        self.Die15image = pygame.image.load(r"Chrono_Sprites/Player_Die8.png").convert_alpha()
+        self.Die16image = pygame.image.load(r"Chrono_Sprites/Player_Die9.png").convert_alpha()
+        self.Die17image = pygame.image.load(r"Chrono_Sprites/Player_Die10.png").convert_alpha()
+        self.Die18image = pygame.image.load(r"Chrono_Sprites/Player_Die11.png").convert_alpha()
         self.DieImages = [self.Die1image,self.Die2image,self.Die3image,self.Die4image,self.Die5image,self.Die6image,self.Die7image,self.Die8image,self.Die9image,self.Die10image,self.Die11image,self.Die12image,self.Die13image,self.Die14image,self.Die15image,self.Die16image,self.Die17image,self.Die18image]
         self.DieImages = [pygame.transform.scale_by(image, 1/self.Scaleby) for image in self.DieImages]
         self.Die2Images = [pygame.transform.flip(image,True,False) for image in self.DieImages]
@@ -206,10 +203,10 @@ class Player(pygame.sprite.Sprite):
             if tile.rect.colliderect(self.rect):
                 if self.Direction.y < 0:
                     self.rect.top = tile.rect.bottom
-                    self.Direction.y = 0 # so that we dont hover on the ceiling
+                    self.Direction.y = 0
                 if self.Direction.y > 0:
                     self.rect.bottom = tile.rect.top
-                    self.Direction.y = 0 # so we dont fall through the floor
+                    self.Direction.y = 0 
                     self.Jump = False
 
     def Animations(self):

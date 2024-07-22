@@ -1,5 +1,5 @@
 import pygame, random
-from pytmx.util_pygame import load_pygame #importing thing for tiled
+from pytmx.util_pygame import load_pygame 
 from pygame.math import Vector2
 pygame.init()
 Game_font = pygame.font.Font("Fonts/E1234.ttf", 20)
@@ -49,7 +49,7 @@ class KeyCodeButtons:
         self.Interface_rect = self.Interface.get_rect(center = self.Button.center)
     
     def Draw(self):
-        pygame.draw.rect(pygame.display.get_surface(),"azure4",self.Button)#"azure4"
+        pygame.draw.rect(pygame.display.get_surface(),"azure4",self.Button)
         pygame.display.get_surface().blit(self.Interface,self.Interface_rect)
         self.Press()
     

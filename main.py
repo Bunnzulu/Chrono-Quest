@@ -2,7 +2,7 @@ import pygame, sys
 from Player import Player
 from Cutscenes import Cutscence, Game_font
 pygame.init()
-WIDTH,HEIGHT = 800,640#800
+WIDTH,HEIGHT = 800,640
 SCREEN = pygame.display.set_mode((WIDTH,HEIGHT))
 pygame.display.set_caption("Chrono Quest")
 Clock = pygame.time.Clock()
@@ -101,7 +101,6 @@ class Main:
         self.Player_Respawn()
         self.Player_Particles()
         self.Bullets.draw(SCREEN)
-        # print(f"SlowDone: {self.SlowDown}, TSTime:{self.TSTime}, TPTime: {self.TPTime}")
         self.Bullets.update(self.SlowDown)
         self.LV17bullets.draw(SCREEN)
         self.LV17bullets.update(self.SlowDown)
@@ -164,7 +163,7 @@ class Main:
                     self.Showtime = 100.5
                 self.Showtime -= 0.5
             if not self.PlayerStop and not self.PlayerPause: self.PlayerGroup.update(self.Collideing_Tiles)
-    #Level 1
+    
     def Door_Interactions(self):
         if not self.Player.Died:
             if self.Cutscences.Stage == "Level 1":
@@ -718,7 +717,7 @@ class Main:
 
     def HoverBlocksSquare(self, TR:int,TL:int,BR:int,BL:int,HoverBlock:pygame.sprite.Group):
         for block in HoverBlock.sprites():
-            if block.rect.topleft[0] > TL[0] and block.rect.topleft[1] == TR[1]: #Its y is 1 higher than intended:
+            if block.rect.topleft[0] > TL[0] and block.rect.topleft[1] == TR[1]: 
                 block.rect.x += (-(self.MovingBlockSpeedSquare.x)*self.SlowDown)
             elif (block.rect.topleft[0] == TL[0]) and block.rect.topleft[1] < BL[1]:
                 block.rect.y += (self.MovingBlockSpeedSquare.y*self.SlowDown)
@@ -738,7 +737,7 @@ class Main:
     
     def HoverBlocksSquare2(self, TR:int,TL:int,BR:int,BL:int,HoverBlock:pygame.sprite.Group):
         for block in HoverBlock.sprites():
-            if block.rect.topleft[0] > TL[0] and block.rect.topleft[1] == TR[1]: #Its y is 1 higher than intended:
+            if block.rect.topleft[0] > TL[0] and block.rect.topleft[1] == TR[1]:
                 block.rect.x += (-(self.MovingBlockSpeedSquare2.x)*self.SlowDown)
             elif (block.rect.topleft[0] == TL[0]) and block.rect.topleft[1] < BL[1]:
                 block.rect.y += (self.MovingBlockSpeedSquare2.y*self.SlowDown)
@@ -793,10 +792,10 @@ class Main:
             if self.Player.rect.colliderect(bullet.rect):
                 if self.Player.Direction.y < 0:
                     self.Player.rect.top = bullet.rect.bottom
-                    self.Player.Direction.y = 0 # so that we dont hover on the ceiling
+                    self.Player.Direction.y = 0 
                 if self.Player.Direction.y > 0:
                     self.Player.rect.bottom = bullet.rect.top
-                    self.Player.Direction.y = 0 # so we dont fall through the floor
+                    self.Player.Direction.y = 0
                     self.Player.Jump = False
             for block in self.Collideing_Tiles.sprites():
                 if bullet.rect.y < -40 or block.rect.colliderect(bullet.rect) or bullet.rect.x < -40: 
